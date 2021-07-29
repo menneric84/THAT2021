@@ -1,0 +1,52 @@
+Dungeons, Dragons, and Graph Databases
+Guy Royse (@guyroyse)
+github.com/guyroyse - src code for presentation
+
+Problem
+    - Wants to explore the dungeon so that he can find the best monsters and find the best loot
+    - Needs to figure out how to navigate the dungeon to get the best things
+
+Two Solutions
+    - Turn dungeon into Database 
+    - Relational Database 
+    - Graph Database
+
+What's a graph database?
+    - It's not GraphQL
+    - What's a graph?
+        - A graph is a series of vertices and edges that describes a thing
+            - Nodes and relationships
+    - Graphs have nodes 
+    - You can have a graph with no relationships
+    - Connected graph - every node has a path that leads to another node
+        - Either directly or indirectly
+    - Fully connected graph
+        - Each node is connected to each and every other node
+    - Undirected graph
+        - Relationships have no direction
+    - Directed graph
+        - Relationships have direction
+    - Degrees
+        - Number of relationships each node has
+    - Outdegree and indegree
+        - Number of relationships in/out of each node
+    - You can lay data on the nodes and relationships
+
+Nodes
+    - These tend to be nouns
+    - Represent items 
+    - Have labels
+    - Have attributes
+    - Can stand alone
+
+Relationship/edge
+    - Represent connections
+        - connects two nodes
+        - type
+        - direction
+        - Cannot exist without nodes
+    - Can have attributes
+    - If you get rid of a node the relationship goes away 
+
+
+Live Demo - Check it out from github - github.com/guyroyse

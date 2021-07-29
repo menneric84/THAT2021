@@ -1,0 +1,73 @@
+Cryptography 101
+Robert Boedigheimer (@boedie)
+www.boedie.dev 
+
+Cryptography - the science of keeping messages secure
+    - Confidentiality - protecte data from being read 
+    - Integrity - verify that data was not modified
+    - Authentication - identify and validate a user
+    - Non-repudiation - sender cannot deny later that they sent a message 
+
+Considerations
+    - How much is the data worth?
+    - How long does it need to be secure?
+    - What are primary threats?
+    - Regulatory compliance
+    - Company security policies
+    - Layered defenses - How many is enough?
+
+DONT WRITE YOUR OWN
+
+Hash Functions
+    - One-way function - easy to compute but hard to reverse 
+    - Hash function - converts a variable length input to a fixed length 
+        - data fingerprint
+        - Use this for integrity, Authentication
+    - Use SHA-2
+        - SHA256 (384, 512)
+        -- 512 is preferred
+    - KeyedHashAlgorithm
+        - HMACSHA256(384, 512)
+        - MACTripleDES
+   - Hashed strings will come back as byte arrays
+   - Good practice is to use a keyed hash to avoid an attacker creating their own hash in order to "guess" query strings
+   - Salt is a unique value that are user specific that is appended to the hash to make it more difficult to guess many passwords
+   - Note: Always use a Cryptographically secure random number generator
+
+Salted passwords
+    - PBKDF2 (Password-baed key derivation Function 2)
+    - Bcrypt is popular
+    - Compute power constantly increasing, so brute force attacks take longer
+        - Can make it very expensive for a hacker
+    - This is used today
+
+Terminology
+    - plaintext - original data
+    - encryption - process of obscuring data
+    - ciphertext- encrypted data
+    - decryption - process to recover original data
+
+Symmetric Algorithms
+    - encryption and decryption use the same (secret) key
+    - primary attack is "brute force" key search, try all possible keys 
+    - Key distribution is difficult
+    - AES
+
+Asymmetric Algorithms
+    - Utilizes two complimentary keys (public key and private key)
+    - Generally 1,000 times slower than symmetric algorithms 
+    - Often use asymmetric to encrypt a "session" symmetric key
+    - Solves the issue of key distribution
+    - RSA is the recommended implementation
+    - Store the public key on web servers
+    - Store private key on an internal secured system that needs the data
+    - Credit card processors use this 
+        - They hold the private key
+        - You'd hold the public key
+    
+Digital Signatures
+    - Provides integrity and non-repudiation
+    - Hash the contents of a message, sign it (encrypt) with senders private key
+    - By default, does not provide confidentiality, can encrypt with receivers public key before signing
+    
+    

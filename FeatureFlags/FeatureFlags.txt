@@ -1,0 +1,74 @@
+Feature Flags - The art of the IF and Deployment
+Chris Ayers (@Chris_L_Ayers)
+
+What are Feature Flags?
+    - Naive implementation - flag in code or configuration
+        - Still requires a a code Deployment
+    
+Why use Feature Flags?
+    - Code separation
+    - Minimize disruption to customers
+    - Progressive rollouts
+    - A/B Testing
+    - Killswitch
+
+Short term Flags
+    - These are used to roll out new features or conduct experiments
+    - These should be cleaned up after implementation
+    - Ex: turn off api call until another team completes work
+
+Longer term flag
+    - Licensing
+    - Advanced features
+    - Operational Flags
+    - Integrations
+    - Load management
+
+Deployment vs. Release 
+    - Deploy
+        - Low Risk, repeatable and routine
+        - Installed on Production
+        - Doesn't mean features are in use
+    - Release
+        - Higher Risk
+        - Business decision
+        - Enables access to a feature
+        - Allows experimentation
+
+    - Increase automation to make "deployments" easier
+    - Deploy frequently, release based on business decisions
+
+** Operationalize feature flags
+    - Limit availability of features
+    - Canary testing
+
+Operationalizing Flags
+    - Downsides
+        - Feature flags are tech debt as soon as you add them
+        - As you add flags, it can be harder to support and debug the system
+        - Chaining flags can cause complexity
+
+Flag Targeting
+    - Targeting Groups
+        - time 
+        - region
+        - user details
+    - Percentages
+    - Triggers
+        - Rise in failures
+        - Load
+
+Best Practices
+    - Have a naming convention
+    - Use meaningful names
+    - Have a central location for flags
+    - NEVER repurpose a feature flag
+    - The development team should share flags and configurations at the end of a sprint
+
+SQL/JSON features
+    - Be additive, never remove old fields 
+    - If you absolutely have to remove a field, obsolete it first.
+    - It's safer to add then remove
+
+
+

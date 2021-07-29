@@ -1,0 +1,101 @@
+Data Modeling - Architecting Relationships
+Trevor Fayas 
+
+Growing up
+    - Look up speeds
+        - Finding records is impacted by number of records, size of records, and comparision logic of lookup
+    - Data in dbs is stored in pages 
+        - Pages are 8kb
+    - String matches are much more intensive than numeric fields
+    - Adding an index dramatically decreases processing time
+        - This is a bandaid
+        - You can get just as fast speeds with proper data Modeling
+
+Inbreeding
+    - Additional Column Based Relationships
+        - Ex: banner1, banner2, banner3
+    - Downsides
+        - Bloats record size
+        - Empty fields
+        - No ordering capabilities
+        - Not flexible
+        - Nightmare to maintain
+    - Positives
+        - No relationship models to maintain
+    - When to use this option?
+        - never
+
+Kissing Cousins
+    - Serialized objects into a long text field
+        - Normally JSON or XML
+        - Deserialized in code
+    - Positives
+        - Can store almost any model
+            - Even arrays
+        - serialized object can only be used by the main entity
+    - Negatives
+        - bloated
+        - Not reusable
+        - Custom UI to maintain
+    - When to use
+        - Metadata
+        - img tags
+        - Attribute data
+    
+Shotgun Wedding
+    - Quick and dirty way to git'er done
+    - String relationships using a string, guid. No foreign key restraints
+    - Positives
+        - Legitimate way of linking objects
+        - Performing lookups can still be easy and fast with indexes
+    - Negatives
+        - Still not the best way to do lookups
+        - no foreign constraints
+        - Deleted items will remain in db since no foreign constraints
+            - Easy to have a null reference
+    - When to use it
+        - Budget
+
+Arranged Marriages
+    - Convention/Contract based relationship
+    - relationships are based on some convention
+    - Positives
+        - Easy to setup
+        - Usually impervious to env changes
+        - Ordering can be easy in a tree strcture
+    - Negatives
+        - Conventions need to be followed
+        - Sharing items can be Difficult
+    - When to use
+        - You have confidence in your editors
+        - Pros outweigh the cons if you can maintain the convention
+
+Polygamy
+    - Relationships based on a shared relationship
+    - Relationships by reference
+        - Ex: article is tech and blog is tech related
+    - Positives
+        - Very flexible relationship model
+        - Easy to add new new categories
+        - fast lookup times
+    - Negatives
+        - Little to no control over what is added to your items
+    - When to use
+        - Whenever you can limit the content that is applicable
+
+Holy Matrimony
+    - int ID binding with proper constraints
+    - foreign key constraints
+    - Positives
+        - Fastest lookups
+        - Easiest to code for
+        - Easiest to maintain
+        - Best
+        - Joins
+    - Negatives
+        - Takes a bit more effort to setup foreign key constraints
+        - Sometimes it requires a new id between envs
+    - When to use
+        - Pretty much always
+
+    

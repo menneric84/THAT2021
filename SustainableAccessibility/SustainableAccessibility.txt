@@ -1,0 +1,36 @@
+Sustainable Accessibility
+Ashley Stove 
+
+What is accessibility?
+    - Making sure websites are consumable by applicable
+    - WCAG 2.0 - standard for measuring
+
+Visibility 93 project
+    - 93% of disabilities do not require a wheelchair
+
+Curb-cut effect
+    - Inspired the American Disabilities Act in 1990
+    - http://ssir.org/articles/entry/the_curb_cut_effect
+
+Steps for success   
+    - Plan for accessibility
+    - Setup Automated Testing
+        - integrate in your pipeline
+    - Regular Manual Testing
+    - Keep checks after delivery
+        - Avoid doing timeframe checks
+
+Choosing a testing tool
+    - Robust coverage
+    - integrate into pipeline
+    - provides easily readable info
+    - allows you to select WCAG compliance
+
+Pa11y - command-line tool that is used to find accessibility issues on web pages.
+    - Provides errors, warnings, and notices
+    - A snippet of surrounding html, action items, and a reference back to the WCAG guidelines
+    - The ability to select a level of compliance
+    - Reporting tools
+    - https://pa11y.org
+    *** Let's implement this in MGL 
+    - Has the ability to set thresholds

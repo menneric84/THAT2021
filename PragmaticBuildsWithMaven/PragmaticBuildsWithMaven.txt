@@ -1,0 +1,22 @@
+Pragmatic Builds with Maven
+Richard Fichtner (@RichardFichtner)
+
+- Basics
+    - Build tool
+    - Dependency management
+    - Convention over conifguration
+    - Standard project layout
+    - Maven has a lot of defaults whereas ant needs conifguration
+- Inheritance
+    - Parent Poms
+    - Super Poms
+- clean install is outdated
+    use verify instead
+- install
+    - install the package into the local repository
+- Direct dependences
+    - libs that are directly used
+- Indirect dependencies
+    - dependencies that are brought in by other dependencies
+- mvnd - this may make builds faster
+    - 2 mins -> 1.20 mins

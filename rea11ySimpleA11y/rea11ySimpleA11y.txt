@@ -1,0 +1,65 @@
+Rea11y Simple A11y
+Chris DeMars (@saltnburnem)
+
+https://youtu.be/XB4cjbYywqg
+
+Levels of Conformances - https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html
+
+A - Should automatically hit A. If we aren't here we should be.
+AA - This is what you should strive for. This is the standard.
+AAA - Difficult to hit. 9/10 times this doesn't happen. This is normally cost prohibitive.
+
+These names will be changing to bronze, silver, and gold in the future
+
+Testing Tools
+
+- Axe Confore (deque)
+    - browser extension
+    - chrome
+    - axe can be built into our build pipeline
+        *** TODO - Can we do this for MGL?
+
+- Lighthouse
+    - Chromium under the hood
+
+Semantic Markup
+    - By default is accessible
+    - "By default HTML is accessible. As developers, our job is not f*** it up."
+    - header, nav, footer, section, form, aside, main, button
+
+ReachUI - Accessible JS design system
+
+Forms
+    - Esnure forms are logical and easy to use 
+    - Ensure the flow makes sense with the keyboard
+    - Radio buttons should be used for items where only one option can be chosen
+    - Use checkboxes when multiple items can be selected
+
+    - Text Inputs
+        - use label elements for Inputs
+    - Text Areas
+        - Same as text Inputs
+    - Radio buttons
+        - Use a fieldset and legend
+        - each radio should have a label and input with a unique id
+    - ***TODO - check MGL for semantic markup. My guess is we are off on this.
+
+What is focus?
+    - The visual representation that something is being interacted with on the page.
+    - Why does focus matter?
+        - https://twoblindbrothers.com
+    - Don't remove focus
+    - focus-within - used to change when you have focus within a form
+
+ARIA
+    - Non contextual elements get meaning to the screen reader
+    - aria should only be used when semantic elements cannot be used
+    - First Rule of ARIA
+        - Don't use ARIA
+            - Should always be considered the second option after semantic markup
+    - Aria controls the rendering of their (the users) non-visual experience
+
+Screen reader   
+    - When testing use an extension or find a way to put yourself in the user's shoes
+    - Ex: put something over monitor so you are forced to navigate like your targetted user
+

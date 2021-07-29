@@ -1,0 +1,44 @@
+Flutter: Write Once, Deploy Everywhere*
+Matthew Ridley (@matt_ridley)
+
+What is Flutter
+    - Introduced by google in 2015
+    - Dart
+    - 1.0 released in 2018
+    - Flutter 2 came out in March 2021
+        - Desktop support for windows, linux, and macOS (early access)
+        - Access to embedded (early access)
+        - Can deploy to web
+        - Null safety
+
+Why Flutter
+    - Stable
+    - Native - feels Native
+    - Open Source
+    - Hot reload
+
+    Why not?
+        - Need to learn Dart
+            - C Language
+
+Let's See it in Action
+    - VS Code 
+    - Android Studio works as well
+    - Can deploy straight to web without additional changes
+        -*** Is it accessible?
+    - pubspec.yaml
+        - libraries
+        - envs
+        - versioning
+        - specify assets folder location
+    - Besides changing icons the speaker rarely needs to do anything platform specific
+    - pub.dev contains libraries for flutter 
+        - Anything over 80% and is active in the last few months are good candidates
+        - Contains a popularity rating
+        - contains installation instructions
+        - Always check out the readme.md
+    - vs code should automatically pick up pubspec.yaml updates
+    - lib directory contains all flutter code
+        - main.dart is only file outside of a directory (this is just a standard practice)
+    - Async based on promises and Futures
+    - 
