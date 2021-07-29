@@ -69,5 +69,10 @@ Digital Signatures
     - Provides integrity and non-repudiation
     - Hash the contents of a message, sign it (encrypt) with senders private key
     - By default, does not provide confidentiality, can encrypt with receivers public key before signing
-    
-    
+
+USE HTTPS!!!
+
+Key Sizes
+    - AES use 256 bits
+    - Asymmetric RSA use 4096
+

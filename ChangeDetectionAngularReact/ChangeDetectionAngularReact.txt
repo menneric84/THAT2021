@@ -1,0 +1,8 @@
+Understanding Change Detection in Angular & React
+Lara Newsom(@LaraNerdsom)
+
+What is 'Change Detection'
+    - Change detection is how the app tracks changes in state and renders the updated state to the dom 
+    - In simple apps it's easy to forget it's happening
+    - In larger and more complex apps more bugs can occur
+
